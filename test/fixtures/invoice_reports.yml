@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  invoice: one
+  paid: false
+  paid_date: 2021-03-31
+  paid_checknum: MyString
+  loan_amount: 9.99
+  loan_paid: false
+  project_cost: 9.99
+  interest_amount: 9.99
+  interest_paid: false
+  tax_amount: 9.99
+  net_amount: 9.99
+
+two:
+  invoice: two
+  paid: false
+  paid_date: 2021-03-31
+  paid_checknum: MyString
+  loan_amount: 9.99
+  loan_paid: false
+  project_cost: 9.99
+  interest_amount: 9.99
+  interest_paid: false
+  tax_amount: 9.99
+  net_amount: 9.99

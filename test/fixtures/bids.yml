@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bid_status: one
+  project_site: one
+  company: one
+  bid_date: 2021-03-31
+  total: 9.99
+
+two:
+  bid_status: two
+  project_site: two
+  company: two
+  bid_date: 2021-03-31
+  total: 9.99

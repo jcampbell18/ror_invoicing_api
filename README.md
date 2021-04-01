@@ -79,23 +79,21 @@
 
 - `rails g scaffold ExpenseItem quantity:integer{4} name:string{150} amount:decimal{'8,2'} subtotal:decimal{'8,2'} tax:decimal{'8,2'} total:decimal{'8,2'}`
 
-- `rails db:migrate`
-
 #### Tables with foreign keys
 
 ##### Terminal Commands
 
 - `rails g scaffold LineItem sku:references description:text amount:decimal{'8,2'}`
 
-- `rails g scaffold Mileage vehicle:references drive_date:date start_mileage:decimal{'7,1'} end_mileage:decimal{'7,1'} total_mileage:decimal{'7,1'}`
-
 - `rails g scaffold ProjectSite address:string{100} city:string{75} state:references zipcode:string{6} access_code:string{10} map_url:text`
 
 - `rails g scaffold Company company_category:references name:string{75} address:string{100} city:string{75} state:references  zipcode:string{6} phone:string{10} fax:string{10} website_url:string{100}`
 
-- `rails g scaffold User user_category:references company:references email:string{100} password:string{250} salt:string{128} first_name:string{75} last_name:string{100} phone:string{10} phone_extension:string{6} `
+- `rails g scaffold Mileage vehicle:references drive_date:date start_mileage:decimal{'7,1'} end_mileage:decimal{'7,1'} total_mileage:decimal{'7,1'}`
 
 - `rails g scaffold Expense expense_category:references company:references expense_date:date total:decimal{'8,2'}`
+
+- `rails g scaffold User user_category:references company:references email:string{100} password:string{250} salt:string{128} first_name:string{75} last_name:string{100} phone:string{10} phone_extension:string{6} `
 
 - `rails g scaffold Bid bid_status:references project_site:references company:references bid_date:date total:decimal{'8,2'}`
 
@@ -103,27 +101,27 @@
 
 - `rails g scaffold InvoiceReport invoice:references paid:boolean paid_date:date paid_checknum:string{10} loan_amount:decimal{'8,2'} loan_paid:boolean project_cost:decimal{'8,2'} interest_amount:decimal{'8,2'} interest_paid:boolean tax_amount:decimal{'8,2'} net_amount:decimal{'8,2'}`
 
-- `rails db:migrate`
-
 #### Tables with ONLY foreign keys
 
 ##### Terminal Commands
 
-- `rails g scaffold LineItemGroup line_item:references`
+- `rails g scaffold BidInvoice bid:references invoice:references`
+
+- `rails g scaffold LineItemGroup line_item:references bid_invoice:references`
+
+- `rails g scaffold ImageCompany image:references company:references`
+
+- `rails g scaffold ImageUser image:references user:references`
+
+- `rails g scaffold ImageInvoice image:references invoice:references`
+
+- `rails g scaffold ImageExpense image:references expense:references`
 
 - `rails g scaffold InvoiceExpense invoice:references expense:references`
 
-- `rails g scaffold InvoiceMileage invoice:references mileage:references`
-
 - `rails g scaffold ExpenseItemGroup expense:references expense_item:references`
-
-- `rails g scaffold ImageInvoice image:references invoice:references`
   
-- `rails g scaffold ImageExpense image:references expense:references`
-  
-- `rails g scaffold ImageCompany image:references company:references`
-  
-- `rails g scaffold ImageUser image:references user:references`
+- `rails g scaffold InvoiceMileage invoice:references mileage:references`
 
 ###### Foreign Keys that can be null
 
