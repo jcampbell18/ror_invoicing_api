@@ -123,31 +123,6 @@
   
 - `rails g scaffold InvoiceMileage invoice:references mileage:references`
 
-###### Foreign Keys that can be null
-
-- edit `app/models/company`
-    - `belongs_to :image_group, optional: true`
-
-- edit `app/models/invoice`
-    - `belongs_to :image_group, optional: true`
-    - `belongs_to :expense, optional: true`
-
-- edit `app/models/expense`
-    - `belongs_to :image_group, optional: true`
-
-##### Makes in app/models/ and db/migrate/
-
-- edit `db/migrate/<datetime>_create_companies`
-    - `t.references :image_group, null: true, foreign_key: true`
-
-- edit `db/migrate/<datetime>_create_invoices`
-    - `t.references :bid, null: true, foreign_key: true`
-    - `t.references :image_group, true: false, foreign_key: true`
-    - `t.references :expense, null: true, foreign_key: true`
-
-- edit `db/migrate/<datetime>_create_expenses`
-    - `t.references :image_group, null: true, foreign_key: true`
-
 ##### Database Migrate
 
 - `rails db:migrate`
