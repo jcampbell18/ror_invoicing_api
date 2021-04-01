@@ -22,9 +22,9 @@
 
 - [x] Project Name: ror_invoicing_api
 
-- ![RubyMine New Project](https://raw.githubusercontent.com/jcampbell18/ror_invoicing_postgres/master/new_project.png)
+- ![RubyMine New Project](https://github.com/jcampbell18/ror_invoicing_api/blob/main/new_project.png)
 
-- ![RubyMine auto-generated command](https://raw.githubusercontent.com/jcampbell18/ror_invoicing_postgres/master/auto_generated_rails.png)
+- ![RubyMine auto-generated command](https://github.com/jcampbell18/ror_invoicing_api/blob/main/auto_generated_rails.png)
 
 ##### Database
 
@@ -45,9 +45,11 @@
 
         - test connection
 
-- ![image](https://raw.githubusercontent.com/jcampbell18/ror_invoicing_v2/master/database_connection.png)
+- ![image](https://github.com/jcampbell18/ror_invoicing_api/blob/main/database_connection.png)
 
 ## Build Database/Model
+
+![Database Diagram](https://github.com/jcampbell18/ror_invoicing_api/blob/main/ror_invoicing_v1.jpg)
 
 - `rails db:create`
 
@@ -135,7 +137,7 @@
 
 - move all controller files to app/controllers/api/v2/ EXCEPT application_controller
 
-- ![image](https://raw.githubusercontent.com/jcampbell18/ror_invoicing_v2/master/api_v1_controllers.png)
+- ![image](https://github.com/jcampbell18/ror_invoicing_api/blob/main/api_v1_controllers.png)
 
 - edit the files in app/controllers/api/v2
 
@@ -143,7 +145,7 @@
 
         - class Api::V1::SomeController < ApplicationController
 
-- ![image](https://raw.githubusercontent.com/jcampbell18/ror_invoicing_v2/master/edit_header.png)
+- ![image](https://github.com/jcampbell18/ror_invoicing_api/blob/main/edit_header.png)
 
 ### Update Routes with Namespaces
 
@@ -159,7 +161,7 @@
 
     - `end`
 
-- ![image](https://raw.githubusercontent.com/jcampbell18/ror_invoicing_v2/master/routes.png)
+- ![image](https://github.com/jcampbell18/ror_invoicing_api/blob/main/routes.png)
 
 ### Seed the database
 
