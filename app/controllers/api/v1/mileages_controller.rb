@@ -1,4 +1,4 @@
-class MileagesController < ApplicationController
+class Api::V1::MileagesController < ApplicationController
   before_action :set_mileage, only: [:show, :update, :destroy]
 
   # GET /mileages

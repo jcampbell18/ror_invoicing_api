@@ -1,4 +1,4 @@
-class LineItemGroupsController < ApplicationController
+class Api::V1::LineItemGroupsController < ApplicationController
   before_action :set_line_item_group, only: [:show, :update, :destroy]
 
   # GET /line_item_groups

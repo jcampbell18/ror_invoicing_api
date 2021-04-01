@@ -1,4 +1,4 @@
-class ImageExpensesController < ApplicationController
+class Api::V1::ImageExpensesController < ApplicationController
   before_action :set_image_expense, only: [:show, :update, :destroy]
 
   # GET /image_expenses

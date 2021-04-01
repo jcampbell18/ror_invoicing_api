@@ -1,4 +1,4 @@
-class SkusController < ApplicationController
+class Api::V1::SkusController < ApplicationController
   before_action :set_sku, only: [:show, :update, :destroy]
 
   # GET /skus

@@ -1,4 +1,4 @@
-class CompanyCategoriesController < ApplicationController
+class Api::V1::CompanyCategoriesController < ApplicationController
   before_action :set_company_category, only: [:show, :update, :destroy]
 
   # GET /company_categories

@@ -1,4 +1,4 @@
-class ImageCompaniesController < ApplicationController
+class Api::V1::ImageCompaniesController < ApplicationController
   before_action :set_image_company, only: [:show, :update, :destroy]
 
   # GET /image_companies

@@ -1,4 +1,4 @@
-class BidStatusesController < ApplicationController
+class Api::V1::BidStatusesController < ApplicationController
   before_action :set_bid_status, only: [:show, :update, :destroy]
 
   # GET /bid_statuses

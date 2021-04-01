@@ -1,4 +1,4 @@
-class BidInvoicesController < ApplicationController
+class Api::V1::BidInvoicesController < ApplicationController
   before_action :set_bid_invoice, only: [:show, :update, :destroy]
 
   # GET /bid_invoices

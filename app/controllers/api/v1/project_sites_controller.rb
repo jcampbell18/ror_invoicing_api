@@ -1,4 +1,4 @@
-class ProjectSitesController < ApplicationController
+class Api::V1::ProjectSitesController < ApplicationController
   before_action :set_project_site, only: [:show, :update, :destroy]
 
   # GET /project_sites

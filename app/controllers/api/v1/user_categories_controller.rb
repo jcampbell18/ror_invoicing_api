@@ -1,4 +1,4 @@
-class UserCategoriesController < ApplicationController
+class Api::V1::UserCategoriesController < ApplicationController
   before_action :set_user_category, only: [:show, :update, :destroy]
 
   # GET /user_categories

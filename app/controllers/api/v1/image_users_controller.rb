@@ -1,4 +1,4 @@
-class ImageUsersController < ApplicationController
+class Api::V1::ImageUsersController < ApplicationController
   before_action :set_image_user, only: [:show, :update, :destroy]
 
   # GET /image_users

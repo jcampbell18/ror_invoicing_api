@@ -1,4 +1,4 @@
-class BidsController < ApplicationController
+class Api::V1::BidsController < ApplicationController
   before_action :set_bid, only: [:show, :update, :destroy]
 
   # GET /bids

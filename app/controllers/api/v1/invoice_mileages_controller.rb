@@ -1,4 +1,4 @@
-class InvoiceMileagesController < ApplicationController
+class Api::V1::InvoiceMileagesController < ApplicationController
   before_action :set_invoice_mileage, only: [:show, :update, :destroy]
 
   # GET /invoice_mileages

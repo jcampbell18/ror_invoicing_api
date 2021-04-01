@@ -1,4 +1,4 @@
-class ExpenseCategoriesController < ApplicationController
+class Api::V1::ExpenseCategoriesController < ApplicationController
   before_action :set_expense_category, only: [:show, :update, :destroy]
 
   # GET /expense_categories

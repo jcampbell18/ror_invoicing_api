@@ -1,4 +1,4 @@
-class ExpenseItemGroupsController < ApplicationController
+class Api::V1::ExpenseItemGroupsController < ApplicationController
   before_action :set_expense_item_group, only: [:show, :update, :destroy]
 
   # GET /expense_item_groups

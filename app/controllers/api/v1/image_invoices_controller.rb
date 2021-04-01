@@ -1,4 +1,4 @@
-class ImageInvoicesController < ApplicationController
+class Api::V1::ImageInvoicesController < ApplicationController
   before_action :set_image_invoice, only: [:show, :update, :destroy]
 
   # GET /image_invoices

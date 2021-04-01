@@ -1,4 +1,4 @@
-class InvoiceReportsController < ApplicationController
+class Api::V1::InvoiceReportsController < ApplicationController
   before_action :set_invoice_report, only: [:show, :update, :destroy]
 
   # GET /invoice_reports
