@@ -129,7 +129,7 @@
 
 - `rails db:migrate`
 
-### Update Contrqoller and Namespace
+### Update Controller and Namespace
 
 - create folder app/controllers/`api`
 
