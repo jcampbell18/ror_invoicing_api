@@ -26,6 +26,16 @@
 
 - ![RubyMine auto-generated command](https://github.com/jcampbell18/ror_invoicing_api/blob/main/auto_generated_rails.png)
 
+#### Gems
+
+- [x] (Bcrypt)[https://rubygems.org/gems/bcrypt]
+
+- [x] (GraphQL)[https://rubygems.org/gems/graphql]
+
+- [x] (rack-cors)[https://rubygems.org/gems/rack-cors]
+
+- be sure to run `bundle` to install the gems
+
 ##### Database
 
 - click on Views > Tool Windows > Database
