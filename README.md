@@ -30,9 +30,11 @@
 
 - [x] (Bcrypt)[https://rubygems.org/gems/bcrypt]
 
+- [x] (rack-cors)[https://rubygems.org/gems/rack-cors]
+  
 - [x] (GraphQL)[https://rubygems.org/gems/graphql]
 
-- [x] (rack-cors)[https://rubygems.org/gems/rack-cors]
+- [x] (graphiql-rails)[https://rubygems.org/gems/graphiql-rails]
 
 - be sure to run `bundle` to install the gems
 

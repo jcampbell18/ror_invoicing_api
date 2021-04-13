@@ -27,6 +27,8 @@ gem 'rack-cors'
 
 # graphQL: A plain-Ruby implementation of GraphQL.
 gem 'graphql', '~> 1.12', '>= 1.12.7'
+# the GraphiQL IDE for GraphQL with Ruby on Rails
+gem 'graphiql-rails', '~> 1.7', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
