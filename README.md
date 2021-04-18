@@ -59,11 +59,15 @@
 
 - ![image](https://github.com/jcampbell18/ror_invoicing_api/blob/main/database_connection.png)
 
-## Build Database/Model
+## Build Database
 
 ![Database Diagram](https://github.com/jcampbell18/ror_invoicing_api/blob/main/ror_invoicing_v1.jpg)
 
 - `rails db:create`
+
+### GraphQL
+
+- run `rails g graphql:install`
 
 ### Scaffold
 
@@ -182,3 +186,105 @@
     - `State.new(name: 'Washington', abbreviation: 'WA')`
 
 - `rails db:seed`
+
+### GraphQL
+
+##### Terminal Commands
+
+- `rails g graphql:object state`
+
+- `rails g graphql:object bidStatus`
+
+- `rails g graphql:object user_category`
+
+- `rails g graphql:object company_category`
+
+- `rails g graphql:object image`
+
+- `rails g graphql:object term`
+
+- `rails g graphql:object vehicle`
+
+- `rails g graphql:object sku`
+
+- `rails g graphql:object expense_category`
+
+- `rails g graphql:object expense_item`
+
+- `rails g graphql:object line_item`
+
+- `rails g graphql:object project_site`
+
+- `rails g graphql:object company`
+
+- `rails g graphql:object mileage`
+
+- `rails g graphql:object expense`
+
+- `rails g graphql:object user`
+
+- `rails g graphql:object bid`
+
+- `rails g graphql:object invoice`
+
+- `rails g graphql:object invoice_report`
+
+- `rails g graphql:object bid_invoice`
+
+- `rails g graphql:object line_item_group`
+
+- `rails g graphql:object image_company`
+
+- `rails g graphql:object image_user`
+
+- `rails g graphql:object image_invoice`
+
+- `rails g graphql:object image_expense`
+
+- `rails g graphql:object invoice_expense`
+
+- `rails g graphql:object expense_item_group`
+
+- `rails g graphql:object invoice_mileage`
+
+#### Update Routes
+
+- update: `config/routes.rb`
+
+```ruby
+if Rails.env.development?
+    mount GraphiQL::Rails::Engine, at: 'graphiql', graphql_path: "graphql#execute"
+  end
+
+  post "/graphql", to: "graphql#execute"
+```
+
+### Loading error... on rails s
+
+- run command: `rails s`
+
+- browser URL: [localhost:3000/graphiql](http://localhost:5000/graphiql)
+
+    - if you are receiving a 'Loading...', continue
+
+Reference: [Setting up your first rails graphql api](https://medium.com/neocoast/setting-up-your-first-rails-graphql-api-acd806b5d596)
+
+#### Update Sprockets
+
+- update `config/application.rb`
+    - uncomment `require 'sprockets/railtie`
+
+- ![image](https://github.com/jcampbell18/ror_invoicing_api/blob/main/rails.sprocket.png)
+
+#### Create directory
+
+- go into `app/`
+    - create folder: `app/assets`
+    - create folder: `app/assets/config`
+    - create file: `app/assets/config/manifest.js`
+    
+```javascript
+//= link graphiql/rails/application.css
+//= link graphiql/rails/application.js
+```
+
