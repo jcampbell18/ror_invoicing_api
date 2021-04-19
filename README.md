@@ -193,7 +193,7 @@
 
 - `rails g graphql:object state`
 
-- `rails g graphql:object bidStatus`
+- `rails g graphql:object bid_status`
 
 - `rails g graphql:object user_category`
 
@@ -288,3 +288,24 @@ Reference: [Setting up your first rails graphql api](https://medium.com/neocoast
 //= link graphiql/rails/application.js
 ```
 
+### Query Type and Fields
+
+- for each model/table of database
+    - adding fields with descriptions
+        - examples of 'states'
+  
+```ruby
+field :states,
+  [Types::StateType],
+  null: false,
+  description: 'Returns a list of states'
+```
+
+    - adding functions
+        - examples of 'states'
+
+```ruby
+def states
+  State.all
+end
+```
