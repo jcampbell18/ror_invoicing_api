@@ -3,7 +3,7 @@ module Types
     field :id, ID, null: false
     field :address, String, null: true
     field :city, String, null: true
-    field :state_id, Integer, null: false
+    field :state, Types::StateType, null: false
     field :zipcode, String, null: true
     field :access_code, String, null: true
     field :map_url, String, null: true

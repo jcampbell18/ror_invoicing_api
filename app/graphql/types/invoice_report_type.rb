@@ -1,7 +1,7 @@
 module Types
   class InvoiceReportType < Types::BaseObject
     field :id, ID, null: false
-    field :invoice_id, Integer, null: false
+    field :invoice, Types::InvoiceType, null: false
     field :paid, Boolean, null: true
     field :paid_date, GraphQL::Types::ISO8601Date, null: true
     field :paid_checknum, String, null: true

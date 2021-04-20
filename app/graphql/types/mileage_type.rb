@@ -1,7 +1,7 @@
 module Types
   class MileageType < Types::BaseObject
     field :id, ID, null: false
-    field :vehicle_id, Integer, null: false
+    field :vehicle, Types::VehicleType, null: false
     field :drive_date, GraphQL::Types::ISO8601Date, null: true
     field :start_mileage, Float, null: true
     field :end_mileage, Float, null: true
