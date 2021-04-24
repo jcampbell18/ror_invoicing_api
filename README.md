@@ -309,3 +309,52 @@ def states
   State.all
 end
 ```
+
+##### Example of UserType and UserCategoryType
+
+UserCategoryType (no foreign key)
+
+```ruby
+module Types
+  class UserCategoryType < Types::BaseObject
+    field :id, ID, null: false
+    field :name, String, null: true
+    field :description, String, null: true
+    field :created_at, GraphQL::Types::ISO8601DateTime, null: false
+    field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
+  end
+end
+```
+
+UserType (with foreign key UserCategoryType)
+
+```ruby
+module Types
+  class UserType < Types::BaseObject
+    field :id, ID, null: false
+    field :user_category, Types::UserCategoryType, null: false
+    field :company, Types::CompanyType, null: false
+    field :email, String, null: true
+    field :password, String, null: true
+    field :salt, String, null: true
+    field :first_name, String, null: true
+    field :last_name, String, null: true
+    field :phone, String, null: true
+    field :phone_extension, String, null: true
+    field :created_at, GraphQL::Types::ISO8601DateTime, null: false
+    field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
+  end
+end
+```
+
+##### Example of usage in graphiql
+
+browser url: `localhost:3000/graphiql`
+
+- example using `User` with `UserCategory`, `Company`, `CompanyCategory`, and `State`
+
+![GraphIQL](https://github.com/jcampbell18/ror_invoicing_api/blob/main/graphiql.png)
+
+#### Install Apollo for client-side
+
+- run command: `yarn add apollo-client apollo-cache-inmemory apollo-link-http apollo-link-error apollo-link graphql graphql-tag react-apollo`
