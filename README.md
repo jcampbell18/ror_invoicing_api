@@ -355,6 +355,3 @@ browser url: `localhost:3000/graphiql`
 
 ![GraphIQL](https://github.com/jcampbell18/ror_invoicing_api/blob/main/graphiql.png)
 
-#### Install Apollo for client-side
-
-- run command: `yarn add apollo-client apollo-cache-inmemory apollo-link-http apollo-link-error apollo-link graphql graphql-tag react-apollo`
