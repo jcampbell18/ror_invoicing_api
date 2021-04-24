@@ -274,7 +274,7 @@ Reference: [Setting up your first rails graphql api](https://medium.com/neocoast
 - update `config/application.rb`
     - uncomment `require 'sprockets/railtie`
 
-- ![image](https://github.com/jcampbell18/ror_invoicing_api/blob/main/rails.sprocket.png)
+- ![image](https://github.com/jcampbell18/ror_invoicing_api/blob/main/rails_sprocket.png)
 
 #### Create directory
 
