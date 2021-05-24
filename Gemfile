@@ -25,6 +25,12 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
+# RSpec
+gem 'rspec', '~> 3.10'
+
+# Factory Bot
+gem 'factory_bot_rails', '~> 6.1'
+
 # graphQL: A plain-Ruby implementation of GraphQL.
 gem 'graphql', '~> 1.12', '>= 1.12.7'
 # the GraphiQL IDE for GraphQL with Ruby on Rails

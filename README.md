@@ -36,6 +36,10 @@
 
 - [x] (graphiql-rails)[https://rubygems.org/gems/graphiql-rails]
 
+- [x] (RSpec)[https://rubygems.org/gems/rspec]
+
+- [x] (FactoryBot)[https://rubygems.org/gems/factory_bot_rails]
+
 - be sure to run `bundle` to install the gems
 
 ##### Database
@@ -355,3 +359,57 @@ browser url: `localhost:3000/graphiql`
 
 ![GraphIQL](https://github.com/jcampbell18/ror_invoicing_api/blob/main/graphiql.png)
 
+### RSpec
+
+- create folder `app/spec`
+
+- create file `app/spec/factories.rb`
+
+```ruby
+# spec/factories.rb
+FactoryBot.define do
+  factory :user do
+    # Use sequence to make sure that the value is unique
+    sequence(:email) { |n| "user-#{n}@example.com" }
+  end
+
+  factory :item do
+    sequence(:title) { |n| "item-#{n}" }
+    user
+  end
+end
+```
+
+- create folder `app/spec/graphql`
+
+- create folder `app/spec/graphql/types`
+
+- create file `app/spec/graphql/types/query_type_spec.rb`
+
+```ruby
+require "rails_helper"
+
+RSpec.describe Types::QueryType do
+  describe "items" do
+    let!(:items) { create_pair(:item) }
+
+    let(:query) do
+      %(query {
+        items {
+          title
+        }
+      })
+    end
+
+    subject(:result) do
+      RorInvoicingApiSchema.execute(query).as_json
+    end
+
+    it "returns all items" do
+      expect(result.dig("data", "items")).to match_array(
+        items.map { |item| { "title" => item.title } }
+      )
+    end
+  end
+end
+```
